@@ -1,41 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
 <nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout
+    android:id="@+id/drawer"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/drawer"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
     <nl.psdcompany.duonavigationdrawer.views.DuoMenuView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
         android:tag="@string/tag_menu"
-        app:footer="@layout/drawer_footer"
-        app:header="@layout/layout_header"/>
-
-    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:tag="@string/tag_content">
+        android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/purple_700"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+            android:layout_height="match_parent">
 
-        <FrameLayout
-            android:id="@+id/container"
+            <TextView
+                android:textSize="30sp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:text="Anonymous"
+                android:textColor="@color/white"/>
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:textSize="16sp"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Elon Musk"
+                        android:textColor="@color/white"/>
+
+                    <TextView
+                        
+                        android:textSize="16sp"
+                        android:layout_marginHorizontal="16dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+880123-4567890"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_marginRight="100dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/elon"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_Home"
+                android:gravity="center_vertical"
+                android:layout_marginTop="50dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_home"
+                    app:tint="@color/white" />
+
+                <TextView
+                    
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Profile"
+                android:gravity="center_vertical"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_person"
+                    app:tint="@color/white" />
+
+                <TextView
+                    
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Setting"
+                android:gravity="center_vertical"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_settings"
+                    app:tint="@color/white" />
+
+                <TextView
+                    
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Setting"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Share"
+                android:gravity="center_vertical"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_share"
+                    app:tint="@color/white" />
+
+                <TextView
+                    
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Share"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_Logout"
+                android:gravity="center_vertical"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="24dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_power"
+                    app:tint="@color/white" />
+
+                <TextView
+                    
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </nl.psdcompany.duonavigationdrawer.views.DuoMenuView>
+
+    <androidx.cardview.widget.CardView
+        android:tag="@string/tag_content"
+        app:cardElevation="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/white"
-            android:padding="?attr/listPreferredItemPaddingRight"/>
-    </LinearLayout>
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar">
+
+
+                <LinearLayout
+                    android:background="@drawable/main_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/frame"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/purple_500"
+                app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout>

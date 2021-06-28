@@ -6,7 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
@@ -22,8 +25,11 @@
             android:layout_height="match_parent"
             android:layout_marginRight="16dp"
             android:layout_marginLeft="0dp"
+            app:labelVisibilityMode="labeled"
             android:background="@android:color/transparent"
             app:menu="@menu/nav_menu" />
+
+
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 
@@ -31,7 +37,9 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_music"
+        android:src="@drawable/ic_touch"
+        app:rippleColor="@color/purple_700"
         app:layout_anchor="@id/bottomAppBar" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
